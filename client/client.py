@@ -6,7 +6,7 @@ class Client:
         self.base_url = base_url
 
     def set_rate(self, currency_pair, rate):
-        url = f'{self.base_url}/set_rate1'
+        url = f'{self.base_url}/set_rate'
         data = {'currency_pair': currency_pair, 'rate': rate}
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         response = requests.post(url, data=json.dumps(data), headers=headers)
