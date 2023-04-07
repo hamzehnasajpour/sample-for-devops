@@ -8,7 +8,7 @@ rate = None
 def set_rate():
     global rate
     data = request.get_json()
-    if not data or 'currency_pair' not in data:
+    if not data or 'currency_pairs' not in data:
         return jsonify({'message': 'currency_pair parameter is missing.'}), 400
     if not data or 'rate' not in data:
         return jsonify({'message': 'rate parameter is missing.'}), 400
